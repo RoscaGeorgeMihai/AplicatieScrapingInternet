@@ -2,6 +2,7 @@ import tkinter
 from tkinter import ttk
 from tkinter.simpledialog import askstring
 from PIL import Image, ImageTk
+import scraping
 
 class GUI(tkinter.Tk):
     def showImage(self):
@@ -21,7 +22,8 @@ class GUI(tkinter.Tk):
 
     def buttonClicked(self):
         self.productName=self.entry.get()
-        print(self.productName)
+        scrapTool=scraping.ScrapTool()
+        scrapTool.priceComparison(self.productName)
 
     def showButton(self,posRow):
         self.searchButton=tkinter.Button(self,text="Search",command=self.buttonClicked)
