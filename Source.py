@@ -1,6 +1,5 @@
-import requests
-
 import GraphicInterface
 
-GUI = GraphicInterface.GUI()
-GUI.mainloop()
+if __name__ == "__main__":
+    GUI = GraphicInterface.GUI()
+    GUI.mainloop()

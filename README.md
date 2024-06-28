@@ -22,3 +22,17 @@ Am intampinat probleme cu scraping-ul website-ului altex. Am rezolvat problema i
 # 21.06.2024
 
 Am rezolvat problema cu scraping-ul website-ului altex, produsele fiind livrate printr-un json ca raspuns la un request de tip xhr. Am incercat si scraping-ul website-ului pcgarage insa m-am blocat deoarece am intalnit o problema, identificandu-mi request-ul drept unul facut de un bot.
+
+# 26.06.2024
+
+Am incercat sa fac scraping site-urilor pcgarage.ro si cel.ro , insa am intampinat probleme deoarece request-ul meu era recunoscut drept unul facut de un bot. Pentru a rezolva aceasta problema m-am documentat de pe stackoverflow si tutoriale de pe youtube.
+
+# 27.06.2024
+
+Am reusit sa fac scraping site-ului cel.ro. Am imbunatatit interfata grafica astfel incat sa ofer utilizatorului posibilitatea de a adauga un email atunci cand vrea sa monitorizeze pretul unui produs, deoarece ulterior cand va avea loc o reducere a pretului produsului, utilizatorul va fi anuntat cu privire la modificare pe mail. Am facut scraping pentru ca atunci cand user-ul introduce un link catre un produs sa ii fie luat pretul pe care il va monitoriza ulterior. Pentru monitorizarea pretului se creaza un fisier "priceLogger.txt" in care vor exista link-uri catre produsele cautate pana in prezent, pretul produsului, impreuna cu email-ul userului.
+
+# 28.06.2024
+
+Am adaugat posibilitatea de trimitere a unui mail catre utilizator in momentul in care pretul produsului scade. Pentru a monitoriza permanent statusul pretului produsului am realizat un cronjob care ruleaza o sursa in python la fiecare doua minute. De fiecare data cand se efectueaza o verificare, aceasta va fi logata intr-un fisier de log: "logger.txt"
+
+cronjob-ul este urmatorul: */2 * * * * python3 /home/rosca/Desktop/ProiectPractica/AplicatieScrapingInternet/priceMonitor.py >> /home/rosca/Desktop/ProiectPractica/AplicatieScrapingInternet/logger.txt 2> /home/rosca/Desktop/ProiectPractica/AplicatieScrapingInternet/logger.txt 
