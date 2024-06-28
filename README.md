@@ -35,4 +35,4 @@ Am reusit sa fac scraping site-ului cel.ro. Am imbunatatit interfata grafica ast
 
 Am adaugat posibilitatea de trimitere a unui mail catre utilizator in momentul in care pretul produsului scade. Pentru a monitoriza permanent statusul pretului produsului am realizat un cronjob care ruleaza o sursa in python la fiecare doua minute. De fiecare data cand se efectueaza o verificare, aceasta va fi logata intr-un fisier de log: "logger.txt"
 
-cronjob-ul este urmatorul: */2 * * * * python3 /home/rosca/Desktop/ProiectPractica/AplicatieScrapingInternet/priceMonitor.py >> /home/rosca/Desktop/ProiectPractica/AplicatieScrapingInternet/logger.txt 2> /home/rosca/Desktop/ProiectPractica/AplicatieScrapingInternet/logger.txt 
+cronjob-ul este urmatorul: */2 * * * * python3 ~/Desktop/ProiectPractica/AplicatieScrapingInternet/priceMonitor.py >> ~/Desktop/ProiectPractica/AplicatieScrapingInternet/logger.txt 2> ~/Desktop/ProiectPractica/AplicatieScrapingInternet/logger.txt 
